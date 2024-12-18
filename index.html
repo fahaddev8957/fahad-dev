@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio of F A H A D, Web Developer and Designer specializing in responsive websites and AI-powered chatbots.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Portfolio Website</title>
+    <style>
+        /* Initially hide the form */
+        #contact-form {
+            display: none;
+            margin-top: 20px;
+            transition: all 0.3s ease;
+        }
+
+        /* Typing effect for profession */
+        .typing-text span {
+            display: inline-block;
+            width: 0;
+            white-space: nowrap;
+            overflow: hidden;
+            animation: typing 3s steps(20) 1s forwards, blink 0.75s step-end infinite;
+        }
+
+        @keyframes typing {
+            from { width: 0; }
+            to { width: 100%; }
+        }
+
+        @keyframes blink {
+            50% { border-color: transparent; }
+        }
+
+        /* Hover effects for social icons */
+        .social-icons a {
+            transition: transform 0.3s ease;
+        }
+
+        .social-icons a:hover {
+            transform: scale(1.2);
+        }
+
+        /* Contact button hover effect */
+        .btn:hover {
+            background-color: #007bff;
+            color: white;
+        }
+
+        /* Styling for the navigation menu */
+        nav a {
+            position: relative;
+            display: inline-block;
+            padding: 10px 15px;
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
+
+        /* Tooltip container (Pop-up) */
+        .popup {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #161616;
+            padding: 15px 20px;
+            border-radius: 10px;
+            width: 250px;
+            max-width: 300px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            color: #b74b4b;
+            font-size: 1.4rem;
+            font-weight: 500;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s ease, visibility 0s 0.3s;
+            z-index: 101;
+            text-align: center;
+            animation: popupFadeIn 0.4s ease-out forwards;
+        }
+
+        @keyframes popupFadeIn {
+            from {
+                opacity: 0;
+                transform: translateX(-50%) translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(-50%) translateY(0);
+            }
+        }
+
+        /* Show tooltip on hover */
+        nav a:hover .popup {
+            display: block;
+            opacity: 1;
+            visibility: visible;
+            transition: opacity 0.3s ease;
+        }
+
+        /* Popup text styling */
+        .popup h3 {
+            font-size: 1.6rem;
+            font-weight: 600;
+            color: #b74b4b;
+            margin-bottom: 10px;
+        }
+
+        /* Blog section styling */
+        .popup p {
+            font-size: 1.2rem;
+            line-height: 1.6;
+        }
+
+        /* Transition for hover effect */
+        nav a:hover {
+            color: #007bff;
+            transition: color 0.3s ease;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <!-- Replaced 'Alex' with 'F A H A D' -->
+        <a href="#" class="logo">F A H A D</a>
+        <nav>
+            <a href="#" class="active">Home</a>
+
+            <!-- Skills Link with Pop-up (Updated to 50-60 words) -->
+            <a href="#">
+                Skills
+                <div class="popup">
+                    <h3>Skills</h3>
+                    I specialize in Web Development, UI/UX Design, and AI technologies. My expertise includes creating responsive websites using HTML, CSS, JavaScript, and frameworks like React and Angular. I also design intuitive user interfaces, focusing on user experience principles. Additionally, I develop AI-powered applications using machine learning and chatbot technologies to enhance automation and user engagement.
+                </div>
+            </a>
+
+            <!-- Blog Link with Pop-up (Updated to focus on your journey) -->
+            <a href="#">
+                Blog
+                <div class="popup">
+                    <h3>Blog</h3>
+                    <p>
+                        My journey in the tech world began in 11th grade when I developed a fascination with coding. I started with basic programming languages like C and Python, and quickly advanced to web development. My passion grew through school projects, leading me to pursue a BCA (Bachelor of Computer Applications). Over the years, I have honed my skills in HTML, CSS, JavaScript, and various front-end frameworks. Today, I am diving into AI and machine learning, applying my knowledge to solve real-world problems through technology. This journey continues to shape my professional career, as I strive to integrate AI and innovative web development practices in all my projects.
+                    </p>
+                </div>
+            </a>
+
+            <!-- Projects Link with Pop-up (Updated to 50-60 words) -->
+            <a href="#">
+                Projects
+                <div class="popup">
+                    <h3>Projects</h3>
+                    I am currently working on various exciting projects that showcase my skills in web development, UI/UX design, and AI development. These include:
+                    <ul>
+                        <li><strong>AI-Powered Chatbot</strong>: Automating customer support using NLP and machine learning.</li>
+                        <li><strong>Dynamic E-Commerce Site</strong>: Building a full-fledged e-commerce platform with payment integration and product management.</li>
+                        <li><strong>Portfolio Website</strong>: A responsive website to display my work and achievements.</li>
+                    </ul>
+                </div>
+            </a>
+        </nav>
+    </header>
+
+    <section class="home">
+        <div class="home-img">
+            <img src="main.jpg" alt="F A H A D">
+        </div>
+        <div class="home-content">
+            <h1>Hi, It's <span>F A H A D</span></h1>
+            <h3 class="typing-text">I'm a <span></span></h3>
+            <p>I'm a Web Developer and Designer Specializing in Creating Responsive Websites and AI-Powered Chatbots. Currently, I'm also Exploring My Entrepreneurial Journey, Combining My Technical Skills With A Passion For Innovation and Problem-Solving.</p>
+            <div class="social-icons">
+                <!-- LinkedIn Icon with your updated profile link -->
+                <a href="https://www.linkedin.com/in/fahad-khan-7b5939322?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">
+                    <i class="fa-brands fa-linkedin"></i>
+                </a>
+
+                <!-- Instagram Icon with your new profile link -->
+                <a href="https://www.instagram.com/__luciferrr___?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+            </div>
+            <!-- Contact Me Button that will show the form -->
+            <a href="#" id="contact-btn" class="btn">Contact Me</a>
+        </div>
+    </section>
+
+    <!-- Updated Contact Form Section with Visme Embed Code -->
+    <section id="contact-form">
+        <div class="visme_d" data-title="B2B Newsletter Subscription" data-url="8rgzkzwm-b2b-newsletter-subscription?fullPage=true" data-domain="forms" data-full-page="true" data-min-height="100vh" data-form-id="107376"></div>
+        <script src="https://static-bundles.visme.co/forms/vismeforms-embed.js"></script>
+    </section>
+
+    <script>
+        // JavaScript to show the form when the button is clicked
+        document.getElementById("contact-btn").addEventListener("click", function(event) {
+            event.preventDefault();  // Prevent default link action
+            // Toggle visibility of the contact form
+            var form = document.getElementById("contact-form");
+            if (form.style.display === "none" || form.style.display === "") {
+                form.style.display = "block";  // Show form
+            } else {
+                form.style.display = "none";   // Hide form
+            }
+        });
+    </script>
+
+</body>
+</html>
